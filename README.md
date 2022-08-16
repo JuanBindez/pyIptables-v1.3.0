@@ -1,2 +1,2 @@
-# pyFirewall v 1.0.0
+# pyFirewall v1.0.0
 pyfirewall
