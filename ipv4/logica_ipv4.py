@@ -20,7 +20,7 @@ class LogicasMenu1:
 
     def delete_id(self):
         id = int(input(Color.VERMELHO + " digite numero da regra a ser deletado \n>>" + Color.RESET))
-        os.system(self.command + {}.fotmat(id))
+        os.system(self.command.format(id))
 
     def port_change(self):
         port = str(input(Color.VERMELHO + "Digite a Porta Escolhida \n PORT >> " + Color.RESET))
@@ -41,3 +41,9 @@ class RegrasList:
     ports_tab_input_drop = LogicasMenu1("sudo iptables -A INPUT -p tcp --dport {} -j DROP")
     ports_tab_forward_drop = LogicasMenu1("sudo iptables -A FORWARD -p tcp --dport {} -j DROP")
     ports_tab_output_drop = LogicasMenu1("sudo iptables -A OUTPUT -p tcp --dport {} -j DROP")
+
+
+class DeleteRegra:
+    delete_INPUT = LogicasMenu1("sudo iptables -D INPUT {}")
+    delete_FORWARD = LogicasMenu1("sudo iptables -D FORWARD {}")
+    delete_OUTPUT = LogicasMenu1("sudo iptables -D OUTPUT {}")
