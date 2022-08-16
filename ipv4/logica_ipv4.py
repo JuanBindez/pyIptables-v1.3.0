@@ -47,3 +47,10 @@ class DeleteRegra:
     delete_INPUT = LogicasMenu1("sudo iptables -D INPUT {}")
     delete_FORWARD = LogicasMenu1("sudo iptables -D FORWARD {}")
     delete_OUTPUT = LogicasMenu1("sudo iptables -D OUTPUT {}")
+
+
+class SaveTable:
+    status_service = LogicasMenu1("sudo systemctl status netfilter-persistent.service")
+    status_service = LogicasMenu1("sudo systemctl start netfilter-persistent.service")
+    status_service = LogicasMenu1("sudo systemctl restart netfilter-persistent.service")
+    
