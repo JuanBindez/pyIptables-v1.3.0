@@ -77,6 +77,11 @@ try:
                 os.system("clear")
                 ver_regras.start_command()
                 menu_main()
+                
+            else:
+                os.system("clear")
+                print("ops, digite apenas os numeros listados!")
+                menu_main()
 
             os.system("clear")
             ver_regras.start_command()
@@ -99,6 +104,11 @@ try:
                     os.system("clear")
                     ver_regras.start_command()
                     menu_main()
+                    
+                else:
+                    os.system("clear")
+                    print("ops, digite apenas os numeros listados!")
+                    menu_main()
 
             def regra_port_FORWARD():
                 header_regra_port()
@@ -115,6 +125,11 @@ try:
                     os.system("clear")
                     ver_regras.start_command()
                     menu_main()
+                    
+                else:
+                    os.system("clear")
+                    print("ops, digite apenas os numeros listados!")
+                    menu_main()
 
             def regra_port_OUTPUT():
                 header_regra_port()
@@ -130,6 +145,11 @@ try:
                     RegrasList.ports_tab_output_drop.port_change()
                     os.system("clear")
                     ver_regras.start_command()
+                    menu_main()
+                    
+                else:
+                    os.system("clear")
+                    print("ops, digite apenas os numeros listados!")
                     menu_main()
 
 
@@ -163,13 +183,13 @@ try:
 
             choice_tab = str(input(">>"))
 
-            if choice_tab == "1":
+            elif choice_tab == "1":
                 regra_port_INPUT()
 
-            if choice_tab == "2":
+            elif choice_tab == "2":
                 regra_port_FORWARD()
 
-            if choice_tab == "3":
+            elif choice_tab == "3":
                 regra_port_OUTPUT()
 
 
@@ -235,6 +255,11 @@ try:
                 os.system("sudo iptables -F")
                 os.system("clear")
                 ver_regras.start_command()
+                menu_main()
+                
+            else:
+                os.system("clear")
+                print("ops, digite apenas os numeros listados!")
                 menu_main()
 
 
