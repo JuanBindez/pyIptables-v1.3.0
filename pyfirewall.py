@@ -193,8 +193,6 @@ try:
                 regra_port_OUTPUT()
 
 
-
-
         elif choice == "4":
             os.system("sudo service netfilter-persistent save")
             time.sleep(2)
@@ -204,7 +202,6 @@ try:
             os.system("clear")
             menu_main()
             
-
 
         elif choice == "5":
             os.system("sudo apt-get install netfilter-persistent.service")
