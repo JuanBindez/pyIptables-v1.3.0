@@ -22,7 +22,6 @@ def header_banner():
                              Y7~^:........^~~7BB 5YY.!Y55555PPPPPPPPG7.PGGGGGGY                 
                              .7~:. .......::^5BP 555:J55PPPPPGGGGGGGBY^BGGBBBBP                 
                                ::.       .:~PBP 55PP:JPPPPGGGGGGGGBBBY^BBBBBB#P   
-                
                                          _____ _                        _ _ 
                              _ __  _   _|  ___(_)_ __ _____      ____ _| | |
                             | '_ \| | | | |_  | | '__/ _ \ \ /\ / / _` | | |
