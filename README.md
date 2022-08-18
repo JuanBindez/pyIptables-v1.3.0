@@ -16,3 +16,12 @@
 ### v1.0.0:
 
 - versão inicial 
+----------
+### objetivo do software:
+
+- facilitar a configuração de firewall (iptables)
+- diminuir a quantidade de comandos digitados
+- facilitar a visualização das regras
+- diminur o tempo de configuração de firewall
+
+### sobre:
