@@ -33,13 +33,13 @@
 ----------
 ### como usar?:
 
-- faça um git clone
+#### faça um git clone
 
     git clone https://github.com/JuanBindez/pyFirewall-v1.0.2
     
-- acesse a pasta
+#### acesse a pasta
 
     cd /pyFirewall-v1.0.2
-- agora é só rodar o software:
+#### agora é só rodar o software:
 
     python3 pyfirewall.py
