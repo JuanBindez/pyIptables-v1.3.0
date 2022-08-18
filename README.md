@@ -25,8 +25,18 @@
 - diminuir a quantidade de comandos digitados
 - facilitar a visualização das regras
 - diminur o tempo de configuração de firewall
-
+----------
 ### sobre:
 
 - escrito no Python versão 3.10.4
 - roda no Linux
+----------
+### como usar?:
+
+- faça um git clone
+    git clone https://github.com/JuanBindez/pyFirewall-v1.0.2
+    
+- acesse a pasta
+    cd /pyFirewall-v1.0.2
+- agora é só rodar o software:
+    python3 pyfirewall.py
