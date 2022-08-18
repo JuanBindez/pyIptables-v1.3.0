@@ -19,27 +19,27 @@
 
 - versão inicial 
 ----------
-### objetivo do software:
+### Objetivo do software:
 
 - facilitar a configuração de firewall (iptables)
 - diminuir a quantidade de comandos digitados
 - facilitar a visualização das regras
 - diminur o tempo de configuração de firewall
 ----------
-### sobre:
+### Sobre:
 
 - escrito no Python versão 3.10.4
 - roda no Linux
 ----------
-### como usar?:
+### Como usar?
 
-#### faça um git clone
+#### Faça um git clone:
 
     git clone https://github.com/JuanBindez/pyFirewall-v1.0.2
     
-#### acesse a pasta
+#### Acesse a pasta:
 
     cd /pyFirewall-v1.0.2
-#### agora é só rodar o software:
+#### Agora é só rodar o software:
 
     python3 pyfirewall.py
