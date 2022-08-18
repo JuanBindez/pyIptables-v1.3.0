@@ -32,7 +32,7 @@
 ----------
 ### o que é o pyFirewall:
 
-- O pyFirewall é um software escrito em Python na versão 3.10.4, que visa manipular os comandos do iptables(https://g.co/kgs/9ZJDYt), este programa pode te     ajudar a entender as regras de firewall e facilitar as configurações.
+- O pyFirewall é um software escrito em Python na versão 3.10.4, que visa manipular os comandos do iptables (https://g.co/kgs/9ZJDYt), este programa pode te  ajudar a entender as regras de firewall e facilitar as configurações.
 ----------
 ### Como usar?
 
