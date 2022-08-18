@@ -9,8 +9,8 @@ from colors import Color
 def header_banner():
     print(Color.AMARELO +
                 '''
-                                      ?B^  :55555PPPPPPPPPGG:JGGGGGGBBBBBBBBBP                 
-                                  ~PGGJ777~:~!!!!!~^~777777!.^7?????~~7JJJJJ?:                 
+                                      ?B^   :55555PPPPPPPPPGG:JGGGGGGBBBBBBBBBP                 
+                                  ~ GGJ777~  ~!!!!!~^~777777!.^7?????~~7JJJJJ?:                 
                                .YBP5PB####G5 YYYYYY. 755555PPPPPPPGGG? GGGGGGBY                 
                            :?~.:GBP5Y5PB###BP 555555:JP5PPPPPPGGGGGGB5~BBBBBBBP                 
                             JBGGBGPY7J5PG###BP 55555.?PPPPPPGGGGGGGGBY^BBBBBB#P                 
