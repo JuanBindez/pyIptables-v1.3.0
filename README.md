@@ -27,3 +27,6 @@
 - diminur o tempo de configuração de firewall
 
 ### sobre:
+
+- escrito no Python versão 3.10.4
+- roda no Linux
