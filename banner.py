@@ -28,9 +28,9 @@ def header_banner():
                             | |_) | |_| |  _| | | | |  __/\ V  V / (_| | | |
                             | .__/ \__, |_|   |_|_|  \___| \_/\_/ \__,_|_|_|   v1.0.2
                             |_|    |___/                              
-                                                    
-                                                                            
+                                                                                 
                                     Copyright (c) 2022 Juan Carlos Bindez
-                                                        
+                                    
+                                       *[Ctrl + C] Para Sair do Programa               
                 '''
     + Color.RESET)
