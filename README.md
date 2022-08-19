@@ -1,4 +1,4 @@
-# Versão Atual pyFirewall v1.0.2
+# Versão Atual pyFirewall v1.0.3
 
 ### "This project is licensed under the MIT License."
 
@@ -6,8 +6,15 @@
 
 
 ![Captura de tela de 2022-08-16 15-57-10](https://user-images.githubusercontent.com/79322362/184959308-276f4ad6-505b-401f-8aae-a69ffeac1786.png)
+----------
 
 ##                           Detalhes de lançamento
+
+### v1.0.3:
+
+- correção de bugs
+- reestruturação de código
+- adicionado recursos de melhorias de navegação pelo menu.
 
 ### v1.0.2:
 
@@ -38,11 +45,11 @@
 
 #### Faça um git clone:
 
-    git clone https://github.com/JuanBindez/pyFirewall-v1.0.2
+    git clone https://github.com/JuanBindez/pyFirewall-v1.0.3
     
 #### Acesse a pasta:
 
-    cd /pyFirewall-v1.0.2
+    cd /pyFirewall-v1.0.3
 #### Agora é só rodar o software:
 
     python3 pyfirewall.py

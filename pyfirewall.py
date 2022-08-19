@@ -6,20 +6,282 @@ Copyright (c) 2022 Juan Carlos Bindez
 try:
     import os
     import time
-    from colors import Color
+
     from banner import header_banner
-    from ipv4.logica_ipv4 import LogicasMenu1
-    from ipv4.logica_ipv4 import RegrasList
-    from ipv4.logica_ipv4 import DeleteRegra
+    from colors import Color
+    from ipv4.logica_ipv4 import DeleteRegra, LogicasMenu1, RegrasList
 
 
-    # MENU PRINCIPAL
     ver_regras = LogicasMenu1("sudo iptables -L --line-numbers")
     delete = LogicasMenu1("sudo iptables -D INPUT")
 
 
+    #### INCIO DO BLOCO DE MENU IPV4 ####
+    def menu_main_ipv4():
 
-    def menu_main():
+        #### escolha 1 ####
+        def Ver_regras_firewall():
+            # ve regras existentes no firewall
+            os.system("clear")
+            ver_regras.start_command()
+            menu_main_ipv4()
+
+        #### escolha 2 ####
+        def deletar_regras_firewall():
+            os.system("clear")
+            ver_regras.start_command()
+            header_banner()
+            # deleta id de regra no firewall
+            print(Color.BRANCO +
+
+                '''                       
+                                         Deletar de qual tabela?
+
+                                *[0]Voltar
+                                *[1]INPUT     
+                                *[2]FORWARD
+                                *[3]OUTPUT
+                                                 
+                '''
+            + Color.RESET)
+
+            choice_delete = str(input(">>"))
+
+            if choice_delete == "0":
+                os.system("clear")
+                menu_main_ipv4()
+
+            elif choice_delete == "1":
+                DeleteRegra.delete_INPUT.delete_id()
+                os.system("clear")
+                ver_regras.start_command()
+                menu_main_ipv4()
+
+            elif choice_delete == "2":
+                DeleteRegra.delete_FORWARD.delete_id()
+                os.system("clear")
+                ver_regras.start_command()
+                menu_main_ipv4()
+
+            elif choice_delete == "3":
+                DeleteRegra.delete_OUTPUT.delete_id()
+                os.system("clear")
+                ver_regras.start_command()
+                menu_main_ipv4()
+                
+            else:
+                os.system("clear")
+                print("ops, digite apenas os numeros listados!")
+                menu_main_ipv4()
+
+            os.system("clear")
+            ver_regras.start_command()
+            delete.delete_id()
+            menu_main_ipv4()
+            #### fim do menu de escolha 2 ####
+
+        #### escolha 3 ####
+        def regras_de_ports_firewall():
+
+            #### func menu de escolha 3 ####
+            def regra_port_INPUT():
+                header_regra_port()
+                choice_regra = str(input(">>"))
+
+                if choice_regra == "0":
+                    os.system("clear")
+                    menu_main_ipv4()
+
+                elif choice_regra == "1":
+                    RegrasList.ports_tab_input_accept.port_change()
+                    os.system("clear")
+                    ver_regras.start_command()
+                    menu_main_ipv4()
+
+                elif choice_regra == "2":
+                    RegrasList.ports_tab_input_drop.port_change()
+                    os.system("clear")
+                    ver_regras.start_command()
+                    menu_main_ipv4()
+                    
+                else:
+                    os.system("clear")
+                    print("ops, digite apenas os numeros listados!")
+                    menu_main_ipv4()
+
+            #### func menu de escolha 3 ####
+            def header_regra_port():
+                os.system("clear")
+                header_banner()
+                print(Color.BRANCO +
+                '''
+                                *[0]Voltar
+                                *[1]ACCEPT
+                                *[2]DROP
+                
+                '''
+                + Color.RESET)
+                #### header ####
+
+            #### func menu de escolha 3 ####
+            def regra_port_FORWARD():
+                header_regra_port()
+                choice_regra = str(input(">>"))
+
+                if choice_regra == "1":
+                    RegrasList.ports_tab_forward_accept.port_change()
+                    os.system("clear")
+                    ver_regras.start_command()
+                    menu_main_ipv4()
+
+                elif choice_regra == "2":
+                    RegrasList.ports_tab_forward_drop.port_change()
+                    os.system("clear")
+                    ver_regras.start_command()
+                    menu_main_ipv4()
+                    
+                else:
+                    os.system("clear")
+                    print("ops, digite apenas os numeros listados!")
+                    menu_main_ipv4()
+
+            #### func menu de escolha 3 ####
+            def regra_port_OUTPUT():
+                header_regra_port()
+                choice_regra = str(input(">>"))
+
+                if choice_regra == "1":
+                    RegrasList.ports_tab_output_accept.port_change()
+                    os.system("clear")
+                    ver_regras.start_command()
+                    menu_main_ipv4()
+
+                elif choice_regra == "2":
+                    RegrasList.ports_tab_output_drop.port_change()
+                    os.system("clear")
+                    ver_regras.start_command()
+                    menu_main_ipv4()
+                    
+                else:
+                    os.system("clear")
+                    print("ops, digite apenas os numeros listados!")
+                    menu_main_ipv4()
+
+
+
+            os.system("clear")
+            ver_regras.start_command()
+            header_banner()
+            print(Color.BRANCO +
+                '''           
+                                         Escolha a Tabela
+
+                                *[0]Voltar
+                                *[1]INPUT
+                                *[2]FORWARD
+                                *[3]OUTPUT
+
+                '''
+            + Color.RESET)
+
+            choice_tab = str(input(">>"))
+
+            if choice_tab == "0":
+                os.system("clear")
+                menu_main_ipv4()
+
+            elif choice_tab == "1":
+                regra_port_INPUT()
+
+            elif choice_tab == "2":
+                regra_port_FORWARD()
+
+            elif choice_tab == "3":
+                regra_port_OUTPUT()
+            #### fim do menu de escolha 3 ####
+        ######################################################################
+
+
+        #### escolha 4 ####
+        def salva_regras_firewall():
+            os.system("sudo service netfilter-persistent save")
+            time.sleep(2)
+            os.system("sudo systemctl restart netfilter-persistent.service")
+            time.sleep(2)
+            os.system("sudo systemctl status netfilter-persistent.service")
+            os.system("clear")
+            menu_main_ipv4()
+
+        #### escolha 5 ####
+        def netfilter_install():
+            os.system("sudo apt-get install netfilter-persistent.service")
+            os.system("sudo apt-get install iptables-persistent")
+            time.sleep(2)
+            os.system("clear")
+            menu_main_ipv4()
+
+        #### escolha 6 ####
+        def exclui_tab_firewall():
+            os.system("clear")
+            ver_regras.start_command()
+            header_banner()
+
+            print(Color.BRANCO +
+
+                '''    
+                                       Escolha a Tabela a ser Excluída
+
+                                *[0]Voltar
+                                *[1]INPUT
+                                *[2]FORWARD
+                                *[3]OUTPUT
+                                *[4]Todas as tabelas
+                
+                '''
+            + Color.RESET)
+
+            escolha = str(input(">>"))
+
+            if escolha == "0":
+                os.system("clear")
+                menu_main_ipv4()
+
+            elif escolha == "1":
+                os.system("sudo iptables -F INPUT")
+                os.system("clear")
+                ver_regras.start_command()
+                menu_main_ipv4()
+
+            elif escolha == "2":
+                os.system("sudo iptables -F FORWARD")
+                os.system("clear")
+                ver_regras.start_command()
+                menu_main_ipv4()
+
+            elif escolha == "3":
+                os.system("sudo iptables -F OUTPUT")
+                os.system("clear")
+                ver_regras.start_command()
+                menu_main_ipv4()
+
+            elif escolha == "4":
+                os.system("sudo iptables -F")
+                os.system("clear")
+                ver_regras.start_command()
+                menu_main_ipv4()
+
+            else:
+                os.system("clear")
+                print("ops, digite apenas os numeros listados!")
+                menu_main_ipv4()
+            #### fim do menu de escolha 6 ####
+
+        #### escolha 7 ####
+        #### fim do menu de escolha 7 ####
+
+
+
+        ###### MENU INICIAL PRINCIPAL IPV4 ######
         header_banner()
         print(Color.BRANCO +
             '''
@@ -36,237 +298,32 @@ try:
         choice = str(input(">>"))
 
         if choice == "1":
-            # ve regras existentes no firewall
-            os.system("clear")
-            ver_regras.start_command()
-            menu_main()
-
+            Ver_regras_firewall()
+            
         elif choice == "2":
-            os.system("clear")
-            ver_regras.start_command()
-            header_banner()
-            # deleta id de regra no firewall
-            print(Color.BRANCO +
-
-                '''                       
-                                         deletar de qual tabela?
-
-                                *[1]INPUT     
-                                *[2]FORWARD
-                                *[3]OUTPUT
-                                                 
-                '''
-            + Color.RESET)
-
-            choice_delete = str(input(">>"))
-
-            if choice_delete == "1":
-                DeleteRegra.delete_INPUT.delete_id()
-                os.system("clear")
-                ver_regras.start_command()
-                menu_main()
-
-            elif choice_delete == "2":
-                DeleteRegra.delete_FORWARD.delete_id()
-                os.system("clear")
-                ver_regras.start_command()
-                menu_main()
-
-            elif choice_delete == "3":
-                DeleteRegra.delete_OUTPUT.delete_id()
-                os.system("clear")
-                ver_regras.start_command()
-                menu_main()
-                
-            else:
-                os.system("clear")
-                print("ops, digite apenas os numeros listados!")
-                menu_main()
-
-            os.system("clear")
-            ver_regras.start_command()
-            delete.delete_id()
-            menu_main()
+          deletar_regras_firewall()
 
         elif choice == "3":
-            def regra_port_INPUT():
-                header_regra_port()
-                choice_regra = str(input(">>"))
-
-                if choice_regra == "1":
-                    RegrasList.ports_tab_input_accept.port_change()
-                    os.system("clear")
-                    ver_regras.start_command()
-                    menu_main()
-
-                elif choice_regra == "2":
-                    RegrasList.ports_tab_input_drop.port_change()
-                    os.system("clear")
-                    ver_regras.start_command()
-                    menu_main()
-                    
-                else:
-                    os.system("clear")
-                    print("ops, digite apenas os numeros listados!")
-                    menu_main()
-
-            def regra_port_FORWARD():
-                header_regra_port()
-                choice_regra = str(input(">>"))
-
-                if choice_regra == "1":
-                    RegrasList.ports_tab_forward_accept.port_change()
-                    os.system("clear")
-                    ver_regras.start_command()
-                    menu_main()
-
-                elif choice_regra == "2":
-                    RegrasList.ports_tab_forward_drop.port_change()
-                    os.system("clear")
-                    ver_regras.start_command()
-                    menu_main()
-                    
-                else:
-                    os.system("clear")
-                    print("ops, digite apenas os numeros listados!")
-                    menu_main()
-
-            def regra_port_OUTPUT():
-                header_regra_port()
-                choice_regra = str(input(">>"))
-
-                if choice_regra == "1":
-                    RegrasList.ports_tab_output_accept.port_change()
-                    os.system("clear")
-                    ver_regras.start_command()
-                    menu_main()
-
-                elif choice_regra == "2":
-                    RegrasList.ports_tab_output_drop.port_change()
-                    os.system("clear")
-                    ver_regras.start_command()
-                    menu_main()
-                    
-                else:
-                    os.system("clear")
-                    print("ops, digite apenas os numeros listados!")
-                    menu_main()
-
-
-
-            # regras de portas
-            def header_regra_port():
-                os.system("clear")
-                header_banner()
-                print(Color.BRANCO +
-                '''
-                                *[1]ACCEPT
-                                *[2]DROP
-                
-                '''
-                + Color.RESET)
-
-
-            os.system("clear")
-            ver_regras.start_command()
-            header_banner()
-            print(Color.BRANCO +
-                '''           
-                                         Escolha a Tabela
-
-                                *[1]INPUT
-                                *[2]FORWARD
-                                *[3]OUTPUT
-
-                '''
-            + Color.RESET)
-
-            choice_tab = str(input(">>"))
-
-            elif choice_tab == "1":
-                regra_port_INPUT()
-
-            elif choice_tab == "2":
-                regra_port_FORWARD()
-
-            elif choice_tab == "3":
-                regra_port_OUTPUT()
-
-
-        elif choice == "4":
-            os.system("sudo service netfilter-persistent save")
-            time.sleep(2)
-            os.system("sudo systemctl restart netfilter-persistent.service")
-            time.sleep(2)
-            os.system("sudo systemctl status netfilter-persistent.service")
-            os.system("clear")
-            menu_main()
+            regras_de_ports_firewall()
             
-
+        elif choice == "4":
+            salva_regras_firewall()
+            
         elif choice == "5":
-            os.system("sudo apt-get install netfilter-persistent.service")
-            os.system("sudo apt-get install iptables-persistent")
-            time.sleep(2)
-            os.system("clear")
-            menu_main()
+            netfilter_install()
 
         elif choice == "6":
-            os.system("clear")
-            ver_regras.start_command()
-            header_banner()
-
-            print(Color.BRANCO +
-
-                '''    
-                                       Escolha a Tabela a ser Excluída
-
-                                *[1]INPUT
-                                *[2]FORWARD
-                                *[3]OUTPUT
-                                *[4]Todas as tabelas
-                
-                '''
-            + Color.RESET)
-
-            escolha = str(input(">>"))
-
-            if escolha == "1":
-                os.system("sudo iptables -F INPUT")
-                os.system("clear")
-                ver_regras.start_command()
-                menu_main()
-
-            elif escolha == "2":
-                os.system("sudo iptables -F FORWARD")
-                os.system("clear")
-                ver_regras.start_command()
-                menu_main()
-
-            elif escolha == "3":
-                os.system("sudo iptables -F OUTPUT")
-                os.system("clear")
-                ver_regras.start_command()
-                menu_main()
-
-            elif escolha == "4":
-                os.system("sudo iptables -F")
-                os.system("clear")
-                ver_regras.start_command()
-                menu_main()
-                
-            else:
-                os.system("clear")
-                print("ops, digite apenas os numeros listados!")
-                menu_main()
-
-
+            exclui_tab_firewall()
+         
         else:
-            print("algo deu errado")
+            os.system("clear")
+            print("Digite Apenas os Números Listados!")
+            menu_main_ipv4()
+        #### FIM DO BLOCO DO MENU PRINCIPAL IPV4
             
 
-
     if __name__ == "__main__":
-        menu_main()
+        menu_main_ipv4()
 
 except KeyboardInterrupt:
     os.system("clear")
