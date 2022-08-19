@@ -5,7 +5,7 @@
 ### "Este projeto está licenciado nos termos da licença MIT."
 
 
-![Captura de tela de 2022-08-16 15-57-10](https://user-images.githubusercontent.com/79322362/184959308-276f4ad6-505b-401f-8aae-a69ffeac1786.png)
+![Captura de tela de 2022-08-19 10-47-14](https://user-images.githubusercontent.com/79322362/185632968-d983efd8-bcb0-47b2-94cc-7587bcc53792.png)
 ----------
 
 ##                           Detalhes de lançamento
