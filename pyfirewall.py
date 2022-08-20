@@ -32,7 +32,7 @@ try:
             ver_regras.start_command()
             header_banner()
             # deleta id de regra no firewall
-            print(Color.BRANCO +
+            print(Color.AMARELO +
 
                 '''                       
                                          Deletar de qual tabela?
@@ -113,7 +113,7 @@ try:
             def header_regra_port():
                 os.system("clear")
                 header_banner()
-                print(Color.BRANCO +
+                print(Color.AMARELO +
                 '''
                                 *[0]Voltar
                                 *[1]ACCEPT
@@ -172,7 +172,7 @@ try:
             os.system("clear")
             ver_regras.start_command()
             header_banner()
-            print(Color.BRANCO +
+            print(Color.AMARELO +
                 '''           
                                          Escolha a Tabela
 
@@ -226,7 +226,7 @@ try:
             ver_regras.start_command()
             header_banner()
 
-            print(Color.BRANCO +
+            print(Color.AMARELO +
 
                 '''    
                                        Escolha a Tabela a ser Excluída
@@ -283,7 +283,7 @@ try:
 
         ###### MENU INICIAL PRINCIPAL IPV4 ######
         header_banner()
-        print(Color.BRANCO +
+        print(Color.AMARELO +
             '''
                                 *[1]Ver regras
                                 *[2]Delete regra
