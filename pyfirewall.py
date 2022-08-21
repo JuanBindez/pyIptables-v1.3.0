@@ -9,7 +9,7 @@ try:
 
     from banner import header_banner
     from colors import Color
-    from ipv4.logica_ipv4 import DeleteRegra, LogicasMenu1, RegrasList
+    from ipv4.logica_ipv4 import DeleteRegra, LogicasMenu1, RegrasList, IpRegras
 
 
     ver_regras = LogicasMenu1("sudo iptables -L --line-numbers")
@@ -229,7 +229,7 @@ try:
             print(Color.AMARELO +
 
                 '''    
-                                       Escolha a Tabela a ser Excluída
+                                        Escolha a Tabela a ser Excluída
 
                                 *[0]Voltar
                                 *[1]INPUT
@@ -276,8 +276,141 @@ try:
                 menu_main_ipv4()
             #### fim do menu de escolha 6 ####
 
+
         #### escolha 7 ####
+        def ip_regras():
+
+            def header_escolha7():
+                os.system("clear")
+                header_banner()
+
+                print(Color.AMARELO +
+                    '''
+                                    *[0]Voltar
+                                    *[1]ACCEPT
+                                    *[2]DROP
+
+                    
+                    '''
+                + Color.RESET)
+
+            ### fuc escolha 7 ###
+            def ip_regra_INPUT_ACCEPT():
+                IpRegras.ip_ACCEPT_tab_INPUT.ip_func_regra()
+                os.system("clear")
+                ver_regras.start_command()
+                menu_main_ipv4()
+
+            ### func escolha 7 ###
+            def ip_regra_FORWARD_ACCEPT():
+                IpRegras.ip_ACCEPT_tab_FORWARD.ip_func_regra()
+                os.system("clear")
+                ver_regras.start_command()
+                menu_main_ipv4()
+
+
+            ### func escolha 7 ###
+            def ip_regra_OUTPUT_ACCEPT():
+                IpRegras.ip_ACCEPT_tab_OUTPUT.ip_func_regra()
+                os.system("clear")
+                ver_regras.start_command()
+                menu_main_ipv4()
+
+
+            ### fuc escolha 7 ###
+            def ip_regra_INPUT_DROP():
+                IpRegras.ip_DROP_tab_INPUT.ip_func_regra()
+                os.system("clear")
+                ver_regras.start_command()
+                menu_main_ipv4()
+
+            ### func escolha 7 ###
+            def ip_regra_FORWARD_DROP():
+                IpRegras.ip_DROP_tab_FORWARD.ip_func_regra()
+                os.system("clear")
+                ver_regras.start_command()
+                menu_main_ipv4()
+
+            ### func escolha 7 ###
+            def ip_regra_OUTPUT_DROP():
+                IpRegras.ip_DROP_tab_OUTPUT.ip_func_regra()
+                os.system("clear")
+                ver_regras.start_command()
+                menu_main_ipv4()
+
+
+            os.system("clear")
+            header_banner()
+            print(Color.AMARELO +
+                '''    
+
+                                        Escolha a Tabela
+
+                                 *[0]Voltar   
+                                 *[1]INPUT
+                                 *[2]FORWARD   
+                                 *[3]OUTPUT
+                '''
+            + Color.RESET)
+
+            escolha7 = str(input(">>"))
+
+            if escolha7 == "0":
+                os.system("clear")
+                menu_main_ipv4()
+
+            elif escolha7 == "1":
+                header_escolha7()
+                escolha = str(input(">>"))
+
+                if escolha == "0":
+                    os.system("clear")
+                    menu_main_ipv4()
+
+                elif escolha == "1":
+                    ip_regra_INPUT_ACCEPT()
+
+                elif escolha == "2":
+                    ip_regra_INPUT_DROP()
+
+
+            elif escolha7 == "2":
+                header_escolha7()
+                escolha = str(input(">>"))
+
+                if escolha == "0":
+                    os.system("clear")
+                    menu_main_ipv4()
+
+                elif escolha == "1":
+                    ip_regra_FORWARD_ACCEPT()
+
+                elif escolha == "2":
+                    ip_regra_FORWARD_DROP()
+
+            elif escolha7 == "3":
+                header_escolha7()
+                escolha = str(input(">>"))
+
+                if escolha == "0":
+                    os.system("clear")
+                    menu_main_ipv4()
+
+                elif escolha == "1":
+                    ip_regra_OUTPUT_ACCEPT()
+
+                elif escolha == "2":
+                    ip_regra_OUTPUT_DROP()
+
+            else:
+                os.system("clear")
+                print("Ops, Digite apenas os numeros listados!")
+                ip_regras()
         #### fim do menu de escolha 7 ####
+
+
+        ### escolha 8 ###
+        ### fim do menu de escolha 8 ###
 
 
 
@@ -291,6 +424,7 @@ try:
                                 *[4]Salvar
                                 *[5]Instalar o netfilter-persistent.service
                                 *[6]Excluir tabelas
+                                *[7]Ip (regras para IPs especificos)
 
             '''
         + Color.RESET)
@@ -314,6 +448,9 @@ try:
 
         elif choice == "6":
             exclui_tab_firewall()
+
+        elif choice == "7":
+            ip_regras()
          
         else:
             os.system("clear")

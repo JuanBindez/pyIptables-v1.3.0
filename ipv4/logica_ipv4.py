@@ -19,13 +19,16 @@ class LogicasMenu1:
         os.system(self.command)
 
     def delete_id(self):
-        id = int(input(Color.VERMELHO + " digite numero da regra a ser deletado \n>>" + Color.RESET))
+        id = int(input(Color.VERMELHO + " digite numero da regra a ser deletada \n>>" + Color.RESET))
         os.system(self.command.format(id))
 
     def port_change(self):
         port = str(input(Color.VERMELHO + "Digite a Porta Escolhida \n PORT >> " + Color.RESET))
         os.system(self.command.format(port))
 
+    def ip_func_regra(self):
+        ip = str(input(Color.VERMELHO + "Digite o ip Escolhido \n PORT >> " + Color.RESET))
+        os.system(self.command.format(ip))
 
 class RegrasList:
     '''
@@ -54,3 +57,14 @@ class SaveTable:
     status_service = LogicasMenu1("sudo systemctl start netfilter-persistent.service")
     status_service = LogicasMenu1("sudo systemctl restart netfilter-persistent.service")
     
+
+class IpRegras:
+    ip_ACCEPT_tab_INPUT = LogicasMenu1("sudo iptables -A INPUT -s {} -j ACCEPT")
+    ip_DROP_tab_INPUT = LogicasMenu1("sudo iptables -A INPUT -s {} -j DROP")
+
+    ip_ACCEPT_tab_FORWARD = LogicasMenu1("sudo iptables -A FORWARD -s {} -j ACCEPT")
+    ip_DROP_tab_FORWARD = LogicasMenu1("sudo iptables -A FORWARD -s {} -j DROP")
+
+    ip_ACCEPT_tab_OUTPUT = LogicasMenu1("sudo iptables -A OUTPUT -s {} -j ACCEPT")
+    ip_DROP_tab_OUTPUT = LogicasMenu1("sudo iptables -A OUTPUT -s {} -j DROP")
+
