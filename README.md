@@ -54,7 +54,7 @@
     
 #### Acesse a pasta:
 
-    cd /pyFirewall-v1.0.4
+    cd pyFirewall-v1.0.4/
 #### Agora é só rodar o software:
 
     python3 pyfirewall.py
