@@ -1,7 +1,14 @@
 '''
+    Todas as funções desse script buscam comandos embutidos
+    nas classes do arquivo logica_ipv4.py e os executam,
+    conforme solicitado na interface do usuario.
+'''
+
+'''
 Copyright (c) 2022 Juan Carlos Bindez
 "This project is licensed under the MIT License."
 '''
+
 
 try:
     import os
@@ -12,6 +19,10 @@ try:
     from ipv4.logica_ipv4 import DeleteRegra, LogicasMenu1, RegrasList, IpRegras
 
 
+    '''
+        variaveis para ver regras numeradas,
+        e regra para deletar tabela.
+    '''
     ver_regras = LogicasMenu1("sudo iptables -L --line-numbers")
     delete = LogicasMenu1("sudo iptables -D INPUT")
 
