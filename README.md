@@ -1,4 +1,4 @@
-# Versão Atual pyFirewall v1.1.2
+# pyFirewall v1.1.2
 
 ### "This project is licensed under the MIT License."
 
