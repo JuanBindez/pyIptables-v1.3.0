@@ -1,12 +1,9 @@
 '''
+   Copyright (c) 2022 Juan Carlos Bindez
+   "This project is licensed under the MIT License."
+   
     Classes usadas para armazenar comandos do iptables,
     e metodos que executam os comandos.
-'''
-
-
-'''
-Copyright (c) 2022 Juan Carlos Bindez
-"This project is licensed under the MIT License."
 '''
 
 
