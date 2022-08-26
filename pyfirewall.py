@@ -17,12 +17,8 @@ try:
     from ipv4.logica_ipv4 import DeleteRegra, LogicasMenu1, RegrasList, IpRegras
 
 
-    '''
-        variaveis para ver regras numeradas,
-        e regra para deletar tabela.
-    '''
-    ver_regras = LogicasMenu1("sudo iptables -L --line-numbers")
-    delete = LogicasMenu1("sudo iptables -D INPUT")
+    ver_regras = LogicasMenu1("sudo iptables -L --line-numbers")# variaveis para ver regras numeradas
+    delete = LogicasMenu1("sudo iptables -D INPUT")# regra para deletar tabela
 
 
     #### INCIO DO BLOCO DE MENU IPV4 ####
