@@ -45,6 +45,7 @@
 ----------
 ### Objetivo do software:
 
+- ser uma interface para iptables
 - facilitar a configuração de firewall (iptables)
 - diminuir a quantidade de comandos digitados
 - facilitar a visualização das regras
