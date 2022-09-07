@@ -1,10 +1,10 @@
 '''
-    Copyright (c) 2022 Juan Carlos Bindez
-    "This project is licensed under the MIT License."
+Copyright (c) 2022 Juan Carlos Bindez
+"This project is licensed under the MIT License."
 
-    Todas as funções desse script buscam comandos embutidos
-    nas classes do arquivo logica_ipv4.py e os executam,
-    conforme solicitado na interface do usuario.
+Todas as funções desse script buscam comandos embutidos
+nas classes do arquivo logica_ipv4.py e os executam,
+conforme solicitado na interface do usuario.
 '''
 
 
