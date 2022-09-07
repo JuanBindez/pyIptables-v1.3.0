@@ -40,7 +40,6 @@ try:
 
     #### INCIO DO BLOCO DE MENU IPV4 ####
     
-
     #### escolha 1 ####
     def Ver_regras_firewall():
         # ve regras existentes no firewall
