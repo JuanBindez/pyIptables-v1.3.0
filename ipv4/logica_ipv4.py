@@ -44,20 +44,26 @@ class LogicasMenu1:
 
     # Deleta regra de tabela especifica no iptables.
     def delete_id(self):
-        id = int(input(Color.VERMELHO + " digite numero da regra a ser deletada \n>>" + Color.RESET))
+        id = int(input(Color.VERMELHO + " digite numero da regra a ser deletada \n>>"))
         os.system(self.command.format(id))
 
 
     # Altera porta especifica no iptables.
     def port_change(self):
-        port = str(input(Color.VERMELHO + "Digite a Porta Escolhida \n PORT >> " + Color.RESET))
+        port = str(input(Color.VERMELHO + "Digite a Porta Escolhida \n PORT >> "))
         os.system(self.command.format(port))
 
 
     # Executa comandos de regras de ip.
     def ip_func_regra(self):
-        ip = str(input(Color.VERMELHO + "Digite o ip Escolhido \n IP >> " + Color.RESET))
+        ip = str(input(Color.VERMELHO + "Digite o ip Escolhido \n IP >> "))
         os.system(self.command.format(ip))
+
+    # Executa comandos de regras de Mac.
+    def mac_func_regra(self):
+        mac = str(input(Color.VERMELHO + "Digite o MacAddress Escolhido \n Mac >> "))
+        os.system(self.command.format(mac))
+
 
 class RegrasList:
     '''
@@ -111,3 +117,16 @@ class IpRegras:
     ip_ACCEPT_tab_OUTPUT = LogicasMenu1("sudo iptables -A OUTPUT -s {} -j ACCEPT")
     ip_DROP_tab_OUTPUT = LogicasMenu1("sudo iptables -A OUTPUT -s {} -j DROP")
 
+
+class MacRegras:
+    '''
+        Aqui as regras especificas para Mac
+    '''
+    mac_ACCEPT_tab_INPUT = LogicasMenu1("sudo iptables -A INPUT -m mac --mac-source {} -j ACCEPT")
+    mac_DROP_tab_INPUT = LogicasMenu1("sudo iptables -A INPUT -m mac --mac-source {} -j DROP")
+
+    mac_ACCEPT_tab_FORWARD = LogicasMenu1("sudo iptables -A FORWARD -m mac --mac-source {} -j ACCEPT")
+    mac_DROP_tab_FORWARD = LogicasMenu1("sudo iptables -A FORWARD -m mac --mac-source {} -j DROP")
+
+    mac_ACCEPT_tab_OUTPUT = LogicasMenu1("sudo iptables -A OUTPUT -m mac --mac-source {} -j ACCEPT")
+    mac_DROP_tab_OUTPUT = LogicasMenu1("sudo iptables -A OUTPUT -m mac --mac-source {} -j DROP")

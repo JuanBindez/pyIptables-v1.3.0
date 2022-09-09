@@ -31,7 +31,7 @@ try:
 
     from banner import header_banner
     from colors import Color
-    from ipv4.logica_ipv4 import DeleteRegra, LogicasMenu1, RegrasList, IpRegras
+    from ipv4.logica_ipv4 import DeleteRegra, LogicasMenu1, RegrasList, IpRegras, MacRegras
 
 
     ver_regras = LogicasMenu1("sudo iptables -L --line-numbers")# variaveis para ver regras numeradas
@@ -39,6 +39,40 @@ try:
 
 
     #### INCIO DO BLOCO DE MENU IPV4 ####
+
+    #### escolha 0 ####
+    def sobre_software():
+        os.system("clear")
+        header_banner()
+        print(Color.AMARELO +
+            '''
+                                         [0] Voltar        
+
+
+        O pyFirewall é um software escrito em Python3, que visa ser uma interface de usuario
+            para o firewall iptables (https://g.co/kgs/9ZJDYt), este programa pode te ajudar
+        a entender as regras de firewall e facilitar as configurações, ele manipula os comandos
+                do iptables, para mais informações sobre o iptables acesse seu manual 
+                                (https://linux.die.net/man/8/iptab
+
+                                Autor: https://github.com/JuanBindez
+
+            
+            '''
+        + Color.RESET)
+
+        escolha = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+
+        if escolha == "0":
+            os.system("clear")
+            menu_main_ipv4()
+
+        else:
+            os.system("clear")
+            print(Color.VERMELHO + "               ops, digite apenas os numeros listados!" + Color.RESET)
+            time.sleep(5)
+            sobre_software()
+
     
     #### escolha 1 ####
     def Ver_regras_firewall():
@@ -58,15 +92,15 @@ try:
                 '''                       
                                          Deletar de qual tabela?
 
-                                *[0]Voltar
-                                *[1]INPUT     
-                                *[2]FORWARD
-                                *[3]OUTPUT
+                                [0] Voltar
+                                [1] INPUT     
+                                [2] FORWARD
+                                [3] OUTPUT
                                                  
                 '''
         + Color.RESET)
 
-        choice_delete = str(input(">>"))
+        choice_delete = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
 
         if choice_delete == "0":
             os.system("clear")
@@ -107,7 +141,7 @@ try:
         #### func menu de escolha 3 ####
         def regra_port_INPUT():
             header_regra_port()
-            choice_regra = str(input(">>"))
+            choice_regra = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
 
             if choice_regra == "0":
                 os.system("clear")
@@ -136,9 +170,9 @@ try:
             header_banner()
             print(Color.AMARELO +
                 '''
-                                *[0]Voltar
-                                *[1]ACCEPT
-                                *[2]DROP
+                                [0] Voltar
+                                [1] ACCEPT
+                                [2] DROP
                 
                 '''
             + Color.RESET)
@@ -147,7 +181,7 @@ try:
         #### func menu de escolha 3 ####
         def regra_port_FORWARD():
             header_regra_port()
-            choice_regra = str(input(">>"))
+            choice_regra = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
 
             if choice_regra == "1":
                 RegrasList.ports_tab_forward_accept.port_change()
@@ -197,15 +231,15 @@ try:
                 '''           
                                          Escolha a Tabela
 
-                                *[0]Voltar
-                                *[1]INPUT
-                                *[2]FORWARD
-                                *[3]OUTPUT
+                                [0] Voltar
+                                [1] INPUT
+                                [2] FORWARD
+                                [3] OUTPUT
 
                 '''
         + Color.RESET)
 
-        choice_tab = str(input(">>"))
+        choice_tab = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
 
         if choice_tab == "0":
             os.system("clear")
@@ -252,16 +286,16 @@ try:
                 '''    
                                         Escolha a Tabela a ser Excluída
 
-                                *[0]Voltar
-                                *[1]INPUT
-                                *[2]FORWARD
-                                *[3]OUTPUT
-                                *[4]Todas as tabelas
+                                [0] Voltar
+                                [1] INPUT
+                                [2] FORWARD
+                                [3] OUTPUT
+                                [4] Excluir Todas as Regras de Todas as tabelas
                 
                 '''
         + Color.RESET)
 
-        escolha = str(input(">>"))
+        escolha = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
 
         if escolha == "0":
             os.system("clear")
@@ -307,9 +341,9 @@ try:
 
             print(Color.AMARELO +
                     '''
-                                    *[0]Voltar
-                                    *[1]ACCEPT
-                                    *[2]DROP
+                                    [0] Voltar
+                                    [1] ACCEPT
+                                    [2] DROP
 
                     
                     '''
@@ -367,14 +401,14 @@ try:
 
                                         Escolha a Tabela
 
-                                 *[0]Voltar   
-                                 *[1]INPUT
-                                 *[2]FORWARD   
-                                 *[3]OUTPUT
+                                 [0] Voltar   
+                                 [1] INPUT
+                                 [2] FORWARD   
+                                 [3] OUTPUT
                 '''
         + Color.RESET)
 
-        escolha7 = str(input(">>"))
+        escolha7 = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
 
         if escolha7 == "0":
             os.system("clear")
@@ -382,7 +416,7 @@ try:
 
         elif escolha7 == "1":
             header_escolha7()
-            escolha = str(input(">>"))
+            escolha = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
 
             if escolha == "0":
                 os.system("clear")
@@ -397,7 +431,7 @@ try:
 
         elif escolha7 == "2":
             header_escolha7()
-            escolha = str(input(">>"))
+            escolha = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
 
             if escolha == "0":
                 os.system("clear")
@@ -411,7 +445,7 @@ try:
 
         elif escolha7 == "3":
             header_escolha7()
-            escolha = str(input(">>"))
+            escolha = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
 
             if escolha == "0":
                 os.system("clear")
@@ -431,8 +465,139 @@ try:
 
 
     ### escolha 8 ###
+    def mac_regras():
+
+        def header_escolha8():
+            os.system("clear")
+            header_banner()
+
+            print(Color.AMARELO +
+                    '''
+                                    [0] Voltar
+                                    [1] ACCEPT
+                                    [2] DROP
+
+                    
+                    '''
+            + Color.RESET)
+
+        ### fuc escolha 8 ###
+        def mac_regra_INPUT_ACCEPT():
+            MacRegras.mac_ACCEPT_tab_INPUT.mac_func_regra()
+            os.system("clear")
+            ver_regras.start_command()
+            menu_main_ipv4()
+
+        ### func escolha 8 ###
+        def mac_regra_FORWARD_ACCEPT():
+            MacRegras.mac_ACCEPT_tab_FORWARD.mac_func_regra()
+            os.system("clear")
+            ver_regras.start_command()
+            menu_main_ipv4()
+
+
+        ### func escolha 8 ###
+        def mac_regra_OUTPUT_ACCEPT():
+            MacRegras.mac_ACCEPT_tab_OUTPUT.mac_func_regra()
+            os.system("clear")
+            ver_regras.start_command()
+            menu_main_ipv4()
+
+
+        ### fuc escolha 8 ###
+        def mac_regra_INPUT_DROP():
+            MacRegras.mac_DROP_tab_INPUT.mac_func_regra()
+            os.system("clear")
+            ver_regras.start_command()
+            menu_main_ipv4()
+
+        ### func escolha 8 ###
+        def mac_regra_FORWARD_DROP():
+            MacRegras.mac_DROP_tab_FORWARD.mac_func_regra()
+            os.system("clear")
+            ver_regras.start_command()
+            menu_main_ipv4()
+
+        ### func escolha 8 ###
+        def mac_regra_OUTPUT_DROP():
+            MacRegras.mac_DROP_tab_OUTPUT.mac_func_regra()
+            os.system("clear")
+            ver_regras.start_command()
+            menu_main_ipv4()
+
+
+        os.system("clear")
+        header_banner()
+        print(Color.AMARELO +
+                '''    
+
+                                        Escolha a Tabela
+
+                                 [0] Voltar   
+                                 [1] INPUT
+                                 [2] FORWARD   
+                                 [3] OUTPUT
+                '''
+        + Color.RESET)
+
+        escolha8 = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+
+        if escolha8 == "0":
+            os.system("clear")
+            menu_main_ipv4()
+
+        elif escolha8 == "1":
+            header_escolha8()
+            escolha = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+
+            if escolha == "0":
+                os.system("clear")
+                menu_main_ipv4()
+
+            elif escolha == "1":
+                mac_regra_INPUT_ACCEPT()
+
+            elif escolha == "2":
+                mac_regra_INPUT_DROP()
+
+
+        elif escolha8 == "2":
+            header_escolha8()
+            escolha = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+
+            if escolha == "0":
+                os.system("clear")
+                menu_main_ipv4()
+
+            elif escolha == "1":
+                mac_regra_FORWARD_ACCEPT()
+
+            elif escolha == "2":
+                mac_regra_FORWARD_DROP()
+
+        elif escolha8 == "3":
+            header_escolha8()
+            escolha = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+
+            if escolha == "0":
+                os.system("clear")
+                menu_main_ipv4()
+
+            elif escolha == "1":
+                mac_regra_OUTPUT_ACCEPT()
+
+            elif escolha == "2":
+                mac_regra_OUTPUT_DROP()
+
+        else:
+            os.system("clear")
+            print("Ops, Digite apenas os numeros listados!")
+            ip_regras()
     ### fim do menu de escolha 8 ###
 
+    ### escolha 9 ###
+
+    ### fim do menu de escolha 9 ###
 
 
     ###### MENU INICIAL PRINCIPAL IPV4 ######
@@ -440,20 +605,25 @@ try:
         header_banner()
         print(Color.AMARELO +
                 '''
-                                    *[1]Ver regras
-                                    *[2]Delete regra
-                                    *[3]Ports
-                                    *[4]Salvar
-                                    *[5]Instalar o netfilter-persistent.service
-                                    *[6]Excluir tabelas
-                                    *[7]Ip (regras para IPs especificos)
+                                [0] Sobre
+                                [1] Ver Regras
+                                [2] Delete Regra
+                                [3] Ports
+                                [4] Salvar
+                                [5] Instalar o netfilter-persistent.service
+                                [6] Excluir Regras de Tabelas
+                                [7] Ip (Regras Para IPs Especificos)
+                                [8] Mac (Regras Para Mac Address)
 
                 '''
         + Color.RESET)
 
-        choice = str(input(">>"))
+        choice = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
 
-        if choice == "1":
+        if choice == "0":
+            sobre_software()
+
+        elif choice == "1":
             Ver_regras_firewall()
                 
         elif choice == "2":
@@ -473,6 +643,9 @@ try:
 
         elif choice == "7":
             ip_regras()
+
+        elif choice == "8":
+            mac_regras()
             
         else:
             os.system("clear")

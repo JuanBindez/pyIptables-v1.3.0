@@ -1,4 +1,4 @@
-# pyFirewall v1.1.2
+# pyFirewall v1.2.0
 
 ### "This project is licensed under the MIT License."
 
@@ -8,6 +8,10 @@
 ----------
 
 ##                           Detalhes de lançamento
+### v1.2.0:
+
+- adicionado bloqueio por Mac address
+- melhorias na interface do usuario
 
 ### v1.1.2:
 
@@ -59,11 +63,11 @@
 
 #### Faça um git clone:
 
-    git clone https://github.com/JuanBindez/pyFirewall-v1.1.2
+    git clone https://github.com/JuanBindez/pyFirewall-v1.2.0
     
 #### Acesse a pasta:
 
-    cd pyFirewall-v1.1.2/
+    cd pyFirewall-v1.2.0/
 #### Agora é só rodar o software:
 
     python3 pyfirewall.py
