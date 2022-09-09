@@ -11,7 +11,7 @@
 ##                           Detalhes de lançamento
 ### v1.2.0:
 
-- adicionado bloqueio por Mac address
+- adicionado regras para Mac address
 - melhorias na interface do usuario
 
 ### v1.1.2:
@@ -37,12 +37,12 @@
 ### v1.0.2:
 
 - adicionado recurso para salvar as alterações do firewall
-- deletar regras
+- adicionado recurso para deletar regras
 
 ### v1.0.1:
 
 - reestruturação de código 
-- correção de falhas
+- correção de bugs
 
 ### v1.0.0:
 
@@ -61,6 +61,10 @@
 - O pyFirewall é um software escrito em Python3, que visa ser uma interface de usuario para o firewall iptables (https://g.co/kgs/9ZJDYt), este programa pode te  ajudar a entender as regras de firewall e facilitar as configurações, ele manipula os comandos do iptables, para mais informações sobre o iptables acesse seu manual (https://linux.die.net/man/8/iptables).
 ----------
 ### Como usar?
+
+### Instale o Git:
+
+    sudo apt install git
 
 #### Faça um git clone:
 
