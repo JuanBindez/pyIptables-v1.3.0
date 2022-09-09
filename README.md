@@ -62,7 +62,7 @@
 ----------
 ### Como usar?
 
-### Instale o Git:
+#### Instale o Git:
 
     sudo apt install git
 
