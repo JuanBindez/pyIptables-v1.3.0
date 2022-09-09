@@ -5,9 +5,6 @@
 ### "Este projeto está licenciado nos termos da licença MIT."
 
 
-![Captura de tela de 2022-09-08 21-30-59](https://user-images.githubusercontent.com/79322362/189248390-c454dfaa-0253-481b-80b6-2c455d43f44e.png)
-
-
 
 ----------
 
@@ -75,3 +72,5 @@
 #### Agora é só rodar o software:
 
     python3 pyfirewall.py
+    
+![Captura de tela de 2022-09-08 21-30-59](https://user-images.githubusercontent.com/79322362/189248390-c454dfaa-0253-481b-80b6-2c455d43f44e.png)
