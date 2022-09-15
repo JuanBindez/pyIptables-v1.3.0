@@ -8,7 +8,7 @@
 
 ----------
 
-##                           Detalhes de lançamento
+##                           Detalhes de Release
 ### v1.2.0:
 
 - adicionado regras para Mac address
