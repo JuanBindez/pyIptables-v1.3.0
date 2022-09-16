@@ -49,11 +49,11 @@ try:
                                          [0] Voltar        
 
 
-        O pyFirewall é um software escrito em Python3, que visa ser uma interface de usuario
+        O pyIptables é um software escrito em Python3, que visa ser uma interface de usuario
             para o firewall iptables (https://g.co/kgs/9ZJDYt), este programa pode te ajudar
         a entender as regras de firewall e facilitar as configurações, ele manipula os comandos
                 do iptables, para mais informações sobre o iptables acesse seu manual 
-                                (https://linux.die.net/man/8/iptab
+                                (https://linux.die.net/man/8/iptables)
 
                                 Autor: https://github.com/JuanBindez
 
