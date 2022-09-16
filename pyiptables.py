@@ -61,7 +61,7 @@ try:
             '''
         + Color.RESET)
 
-        escolha = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+        escolha = str(input(Color.AMARELO + "Escolha Uma Opção >>"))
 
         if escolha == "0":
             os.system("clear")
@@ -100,7 +100,7 @@ try:
                 '''
         + Color.RESET)
 
-        choice_delete = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+        choice_delete = str(input(Color.AMARELO + "Escolha Uma Opção>>"))
 
         if choice_delete == "0":
             os.system("clear")
@@ -141,7 +141,7 @@ try:
         #### func menu de escolha 3 ####
         def regra_port_INPUT():
             header_regra_port()
-            choice_regra = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+            choice_regra = str(input(Color.AMARELO + "Escolha Uma Opção >>"))
 
             if choice_regra == "0":
                 os.system("clear")
@@ -181,7 +181,7 @@ try:
         #### func menu de escolha 3 ####
         def regra_port_FORWARD():
             header_regra_port()
-            choice_regra = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+            choice_regra = str(input(Color.AMARELO + "Escolha Uma Opção >>"))
 
             if choice_regra == "1":
                 RegrasList.ports_tab_forward_accept.port_change()
@@ -239,7 +239,7 @@ try:
                 '''
         + Color.RESET)
 
-        choice_tab = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+        choice_tab = str(input(Color.AMARELO + "Escolha Uma Opção >>"))
 
         if choice_tab == "0":
             os.system("clear")
@@ -295,7 +295,7 @@ try:
                 '''
         + Color.RESET)
 
-        escolha = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+        escolha = str(input(Color.AMARELO + "Escolha Uma Opção >>"))
 
         if escolha == "0":
             os.system("clear")
@@ -408,7 +408,7 @@ try:
                 '''
         + Color.RESET)
 
-        escolha7 = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+        escolha7 = str(input(Color.AMARELO + "Escolha Uma Opção >>"))
 
         if escolha7 == "0":
             os.system("clear")
@@ -416,7 +416,7 @@ try:
 
         elif escolha7 == "1":
             header_escolha7()
-            escolha = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+            escolha = str(input(Color.AMARELO + "Escolha Uma Opção >>"))
 
             if escolha == "0":
                 os.system("clear")
@@ -431,7 +431,7 @@ try:
 
         elif escolha7 == "2":
             header_escolha7()
-            escolha = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+            escolha = str(input(Color.AMARELO + "Escolha Uma Opção >>"))
 
             if escolha == "0":
                 os.system("clear")
@@ -445,7 +445,7 @@ try:
 
         elif escolha7 == "3":
             header_escolha7()
-            escolha = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+            escolha = str(input(Color.AMARELO + "Escolha Uma Opção >>"))
 
             if escolha == "0":
                 os.system("clear")
@@ -540,7 +540,7 @@ try:
                 '''
         + Color.RESET)
 
-        escolha8 = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+        escolha8 = str(input(Color.AMARELO + "Escolha Uma Opção >>"))
 
         if escolha8 == "0":
             os.system("clear")
@@ -548,7 +548,7 @@ try:
 
         elif escolha8 == "1":
             header_escolha8()
-            escolha = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+            escolha = str(input(Color.AMARELO + "Escolha Uma Opção >>"))
 
             if escolha == "0":
                 os.system("clear")
@@ -563,7 +563,7 @@ try:
 
         elif escolha8 == "2":
             header_escolha8()
-            escolha = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+            escolha = str(input(Color.AMARELO + "Escolha Uma Opção >>"))
 
             if escolha == "0":
                 os.system("clear")
@@ -577,7 +577,7 @@ try:
 
         elif escolha8 == "3":
             header_escolha8()
-            escolha = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+            escolha = str(input(Color.AMARELO + "Escolha Uma Opção >>"))
 
             if escolha == "0":
                 os.system("clear")
@@ -618,7 +618,7 @@ try:
                 '''
         + Color.RESET)
 
-        choice = str(input(Color.AMARELO + "Enter Em Sua Escolha >>"))
+        choice = str(input(Color.AMARELO + "Escolha Uma Opção >>"))
 
         if choice == "0":
             sobre_software()
