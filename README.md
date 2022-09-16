@@ -13,6 +13,7 @@
 ### v1.3.0:
 
 - alterado o nome do software de pyFirewall para pyIptables
+- melhorias na interface do usuário
 
 ### v1.2.0:
 
