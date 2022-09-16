@@ -1,4 +1,4 @@
-# pyFirewall v1.2.0
+# pyIptables v1.3.0
 
 ### "This project is licensed under the MIT License."
 
@@ -9,6 +9,11 @@
 ----------
 
 ##                           Detalhes de Release
+
+### v1.3.0:
+
+- alterado o nome do software de pyFirewall para pyIptables
+
 ### v1.2.0:
 
 - adicionado regras para Mac address
@@ -56,9 +61,9 @@
 - facilitar a visualização das regras
 - diminur o tempo de configuração de firewall
 ----------
-### o que é o pyFirewall:
+### o que é o pyIptables:
 
-- O pyFirewall é um software escrito em Python3, que visa ser uma interface de usuario para o firewall iptables (https://g.co/kgs/9ZJDYt), este programa pode te  ajudar a entender as regras de firewall e facilitar as configurações, ele manipula os comandos do iptables, para mais informações sobre o iptables acesse seu manual (https://linux.die.net/man/8/iptables).
+- O pyIptables é um software escrito em Python3, que visa ser uma interface de usuario para o firewall iptables (https://g.co/kgs/9ZJDYt), este programa pode te  ajudar a entender as regras de firewall e facilitar as configurações, ele manipula os comandos do iptables, para mais informações sobre o iptables acesse seu manual (https://linux.die.net/man/8/iptables).
 ----------
 ### Como usar?
 
@@ -68,13 +73,14 @@
 
 #### Faça um git clone:
 
-    git clone https://github.com/JuanBindez/pyFirewall-v1.2.0
+    git clone https://github.com/JuanBindez/pyIptables-v1.3.0
     
 #### Acesse a pasta:
 
-    cd pyFirewall-v1.2.0/
+    cd pyIptables-v1.3.0/
+    
 #### Agora é só rodar o software:
 
-    python3 pyfirewall.py
+    python3 pyiptables.py
     
 ![Captura de tela de 2022-09-08 21-30-59](https://user-images.githubusercontent.com/79322362/189248390-c454dfaa-0253-481b-80b6-2c455d43f44e.png)
