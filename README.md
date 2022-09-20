@@ -3,7 +3,7 @@
 ### "This project is licensed under the MIT License."
 
 ### "Este projeto está licenciado nos termos da licença MIT."
-
+Copyright (c) 2022 Juan Carlos Bindez
 
 
 ----------
