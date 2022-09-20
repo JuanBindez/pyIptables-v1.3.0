@@ -1,4 +1,4 @@
-# pyIptables v1.3.0
+# Este é o pyIptables versão 1.3.0
 
 ### "This project is licensed under the MIT License."
 
