@@ -8,9 +8,8 @@ Copyright (c) 2022 Juan Carlos Bindez
 
 ----------
 
-### Detalhes de Release:
-
-                              
+### Detalhes de Release change log:
+                           
 
 ### v1.3.0:
 
