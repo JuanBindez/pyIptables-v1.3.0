@@ -8,7 +8,7 @@ Copyright (c) 2022 Juan Carlos Bindez
 
 ----------
 
-### Detalhes de Release change log:
+### Detalhes de Release Change Log:
                            
 
 ### v1.3.0:
