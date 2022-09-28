@@ -89,4 +89,4 @@ Copyright (c) 2022 Juan Carlos Bindez
 
 ### Acesse o site do tutorial:
 
-https://juanbindez.github.io/pyIptables-v1.3.0/
+https://juanbindez.github.io/site.pyIptables/
