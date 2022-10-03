@@ -6,7 +6,7 @@ Copyright (c) 2022 Juan Carlos Bindez
 
 ### "Este projeto está licenciado nos termos da licença MIT."
 
-### Acesse o site click __[aqui](https:juanbindez.github.io/site.pyIptables/)__.
+### Acesse o site click __[aqui](https://juanbindez.github.io/site.pyIptables/index.html)__.
 
 ----------
 ### Objetivo do software:
