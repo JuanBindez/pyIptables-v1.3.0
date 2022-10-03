@@ -21,7 +21,7 @@ Copyright (c) 2022 Juan Carlos Bindez
 
 - O pyIptables é um software escrito em Python3, que visa ser uma interface de usuario para o firewall iptables (https://g.co/kgs/9ZJDYt), este programa pode te  ajudar a entender as regras de firewall e facilitar as configurações, ele manipula os comandos do iptables, para mais informações sobre o iptables acesse seu manual (https://linux.die.net/man/8/iptables).
 ----------
-### Como usar?
+### Instalação
 
 #### Instale o Git:
 
