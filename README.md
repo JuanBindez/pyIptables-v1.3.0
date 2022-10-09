@@ -2,9 +2,9 @@
 
 Copyright (c) 2022 Juan Carlos Bindez
 
-"This project is licensed under the MIT License."
+"This project is licensed under GNU General Public License v2.0."
 
-"Este projeto está licenciado nos termos da licença MIT."
+"Este projeto está licenciado nos termos da licença GNU General Public License v2.0."
 
 ### Acesse o site click __[aqui](https://juanbindez.github.io/site.pyIptables/index.html)__.
 
