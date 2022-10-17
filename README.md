@@ -39,4 +39,4 @@ Copyright (c) 2022 Juan Carlos Bindez
 
     python3 pyiptables.py
     
-![Captura de tela de 2022-09-08 21-30-59](https://user-images.githubusercontent.com/79322362/189248390-c454dfaa-0253-481b-80b6-2c455d43f44e.png)
+![Captura de tela de 2022-10-17 10-42-25](https://user-images.githubusercontent.com/79322362/196192808-baa45eaa-02be-4e85-b2f1-d39de4065934.png)
