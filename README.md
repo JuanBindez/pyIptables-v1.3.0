@@ -1,6 +1,5 @@
 # Este é o pyIptables versão 1.3.0
 
-Copyright (c) 2022 Juan Carlos Bindez
 
 "This project is licensed under GNU General Public License v2.0."
 
