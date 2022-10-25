@@ -1,5 +1,7 @@
 # A interface of the iptables written in Python.
 #
+#     pyIptables-v1.3.0/ipv4/__init__.py
+#
 # Copyright (c) 2022  Juan Carlos Bindez
 #
 # This program is free software; you can redistribute it and/or modify
@@ -16,5 +18,4 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #  
-# autor: https://github.com/juanBindez
-# e-mail: juanbindez780@gmail.com
+# autor: https://github.com/juanBindez   <juanbindez780@gmail.com>
