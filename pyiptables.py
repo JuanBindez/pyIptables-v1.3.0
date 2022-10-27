@@ -1,4 +1,4 @@
-# A interface of the iptables written in Python.
+# A interface of the iptables.
 #
 # pyIptables-v1.3.0/pyiptables.py
 #
@@ -18,7 +18,7 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #  
-# autor: https://github.com/juanBindez   <juanbindez780@gmail.com>
+# autor: <https://github.com/juanBindez>   <juanbindez780@gmail.com>
 
 
 try:
@@ -34,25 +34,23 @@ try:
     delete = LogicasMenu1("sudo iptables -D INPUT")# regra para deletar tabela
 
 
-    #### INCIO DO BLOCO DE MENU IPV4 ####
+    # INCIO DO BLOCO DE MENU IPV4
 
-    #### escolha 0 ####
+    # escolha 0
     def sobre_software():
+        '''exibe informações sobre o programa.'''
+
         os.system("clear")
         header_banner()
         print(Color.AMARELO +
             '''
                                          [0] Voltar        
-
-
         O pyIptables é um software escrito em Python3, que visa ser uma interface de usuario
             para o firewall iptables (https://g.co/kgs/9ZJDYt), este programa pode te ajudar
         a entender as regras de firewall e facilitar as configurações, ele manipula os comandos
                 do iptables, para mais informações sobre o iptables acesse seu manual 
                                 (https://linux.die.net/man/8/iptables)
-
                                 Autor: https://github.com/JuanBindez
-
             
             '''
         + Color.RESET)
@@ -70,24 +68,27 @@ try:
             sobre_software()
 
     
-    #### escolha 1 ####
+    # escolha 1 
     def Ver_regras_firewall():
-        # ve regras existentes no firewall
+        '''ve regras existentes no firewall'''
+        
         os.system("clear")
         ver_regras.start_command()
         menu_main_ipv4()
 
-    #### escolha 2 ####
+    # escolha 2 
     def deletar_regras_firewall():
+        '''deleta id de regra no firewall'''
+    
         os.system("clear")
         ver_regras.start_command()
         header_banner()
-        # deleta id de regra no firewall
+        
+        
         print(Color.AMARELO +
 
                 '''                       
                                          Deletar de qual tabela?
-
                                 [0] Voltar
                                 [1] INPUT     
                                 [2] FORWARD
@@ -129,12 +130,13 @@ try:
         ver_regras.start_command()
         delete.delete_id()
         menu_main_ipv4()
-        #### fim do menu de escolha 2 ####
+        # fim do menu de escolha 2
 
-    #### escolha 3 ####
+    # escolha 3 
     def regras_de_ports_firewall():
+        '''regras de portas'''
 
-        #### func menu de escolha 3 ####
+        # função menu de escolha 3 
         def regra_port_INPUT():
             header_regra_port()
             choice_regra = str(input(Color.AMARELO + "Escolha Uma Opção >>"))
@@ -160,7 +162,7 @@ try:
                 print("ops, digite apenas os numeros listados!")
                 menu_main_ipv4()
 
-        #### func menu de escolha 3 ####
+        # função menu de escolha 3
         def header_regra_port():
             os.system("clear")
             header_banner()
@@ -172,9 +174,9 @@ try:
                 
                 '''
             + Color.RESET)
-            ### header ####
+            # header
 
-        #### func menu de escolha 3 ####
+        # função menu de escolha 3
         def regra_port_FORWARD():
             header_regra_port()
             choice_regra = str(input(Color.AMARELO + "Escolha Uma Opção >>"))
@@ -196,7 +198,7 @@ try:
                 print("ops, digite apenas os numeros listados!")
                 menu_main_ipv4()
 
-        #### func menu de escolha 3 ####
+        # função menu de escolha 3 ####
         def regra_port_OUTPUT():
             header_regra_port()
             choice_regra = str(input(">>"))
@@ -226,12 +228,10 @@ try:
         print(Color.AMARELO +
                 '''           
                                          Escolha a Tabela
-
                                 [0] Voltar
                                 [1] INPUT
                                 [2] FORWARD
                                 [3] OUTPUT
-
                 '''
         + Color.RESET)
 
@@ -249,12 +249,14 @@ try:
 
         elif choice_tab == "3":
             regra_port_OUTPUT()
-        #### fim do menu de escolha 3 ####
+        # fim do menu de escolha 3
     ######################################################################
 
 
-    #### escolha 4 ####
+    # escolha 4
     def salva_regras_firewall():
+        '''salva as regras do firewall.'''
+
         os.system("sudo service netfilter-persistent save")
         time.sleep(2)
         os.system("sudo systemctl restart netfilter-persistent.service")
@@ -263,16 +265,20 @@ try:
         os.system("clear")
         menu_main_ipv4()
 
-    #### escolha 5 ####
+    # escolha 5 
     def netfilter_install():
+        '''faz a instalação do netfilter'''
+
         os.system("sudo apt-get install netfilter-persistent.service")
         os.system("sudo apt-get install iptables-persistent")
         time.sleep(2)
         os.system("clear")
         menu_main_ipv4()
 
-    #### escolha 6 ####
+    # escolha 6 
     def exclui_tab_firewall():
+        '''exclui tabelas de regras do firewall.'''
+
         os.system("clear")
         ver_regras.start_command()
         header_banner()
@@ -281,7 +287,6 @@ try:
 
                 '''    
                                         Escolha a Tabela a ser Excluída
-
                                 [0] Voltar
                                 [1] INPUT
                                 [2] FORWARD
@@ -325,10 +330,10 @@ try:
             os.system("clear")
             print("ops, digite apenas os numeros listados!")
             menu_main_ipv4()
-        #### fim do menu de escolha 6 ####
+        # fim do menu de escolha 6
 
 
-    #### escolha 7 ####
+    # escolha 7 
     def ip_regras():
 
         def header_escolha7():
@@ -340,19 +345,18 @@ try:
                                     [0] Voltar
                                     [1] ACCEPT
                                     [2] DROP
-
                     
                     '''
             + Color.RESET)
 
-        ### fuc escolha 7 ###
+        # fução escolha 7
         def ip_regra_INPUT_ACCEPT():
             IpRegras.ip_ACCEPT_tab_INPUT.ip_func_regra()
             os.system("clear")
             ver_regras.start_command()
             menu_main_ipv4()
 
-        ### func escolha 7 ###
+        # fução escolha 7
         def ip_regra_FORWARD_ACCEPT():
             IpRegras.ip_ACCEPT_tab_FORWARD.ip_func_regra()
             os.system("clear")
@@ -360,7 +364,7 @@ try:
             menu_main_ipv4()
 
 
-        ### func escolha 7 ###
+        # fução escolha 7
         def ip_regra_OUTPUT_ACCEPT():
             IpRegras.ip_ACCEPT_tab_OUTPUT.ip_func_regra()
             os.system("clear")
@@ -368,21 +372,21 @@ try:
             menu_main_ipv4()
 
 
-        ### fuc escolha 7 ###
+        # fução escolha 7
         def ip_regra_INPUT_DROP():
             IpRegras.ip_DROP_tab_INPUT.ip_func_regra()
             os.system("clear")
             ver_regras.start_command()
             menu_main_ipv4()
 
-        ### func escolha 7 ###
+        #fução escolha 7
         def ip_regra_FORWARD_DROP():
             IpRegras.ip_DROP_tab_FORWARD.ip_func_regra()
             os.system("clear")
             ver_regras.start_command()
             menu_main_ipv4()
 
-        ### func escolha 7 ###
+        # fução escolha 7
         def ip_regra_OUTPUT_DROP():
             IpRegras.ip_DROP_tab_OUTPUT.ip_func_regra()
             os.system("clear")
@@ -394,9 +398,7 @@ try:
         header_banner()
         print(Color.AMARELO +
                 '''    
-
                                         Escolha a Tabela
-
                                  [0] Voltar   
                                  [1] INPUT
                                  [2] FORWARD   
@@ -457,11 +459,12 @@ try:
             os.system("clear")
             print("Ops, Digite apenas os numeros listados!")
             ip_regras()
-    #### fim do menu de escolha 7 ####
+    # fim do menu de escolha 7
 
 
-    ### escolha 8 ###
+    # escolha 8
     def mac_regras():
+        '''regras para macaddress'''
 
         def header_escolha8():
             os.system("clear")
@@ -472,19 +475,18 @@ try:
                                     [0] Voltar
                                     [1] ACCEPT
                                     [2] DROP
-
                     
                     '''
             + Color.RESET)
 
-        ### fuc escolha 8 ###
+        # função escolha 8
         def mac_regra_INPUT_ACCEPT():
             MacRegras.mac_ACCEPT_tab_INPUT.mac_func_regra()
             os.system("clear")
             ver_regras.start_command()
             menu_main_ipv4()
 
-        ### func escolha 8 ###
+        # função escolha 8
         def mac_regra_FORWARD_ACCEPT():
             MacRegras.mac_ACCEPT_tab_FORWARD.mac_func_regra()
             os.system("clear")
@@ -492,7 +494,7 @@ try:
             menu_main_ipv4()
 
 
-        ### func escolha 8 ###
+        # fuçnão escolha 8
         def mac_regra_OUTPUT_ACCEPT():
             MacRegras.mac_ACCEPT_tab_OUTPUT.mac_func_regra()
             os.system("clear")
@@ -500,21 +502,21 @@ try:
             menu_main_ipv4()
 
 
-        ### fuc escolha 8 ###
+        # função escolha 8
         def mac_regra_INPUT_DROP():
             MacRegras.mac_DROP_tab_INPUT.mac_func_regra()
             os.system("clear")
             ver_regras.start_command()
             menu_main_ipv4()
 
-        ### func escolha 8 ###
+        # função escolha 8
         def mac_regra_FORWARD_DROP():
             MacRegras.mac_DROP_tab_FORWARD.mac_func_regra()
             os.system("clear")
             ver_regras.start_command()
             menu_main_ipv4()
 
-        ### func escolha 8 ###
+        # função escolha 8
         def mac_regra_OUTPUT_DROP():
             MacRegras.mac_DROP_tab_OUTPUT.mac_func_regra()
             os.system("clear")
@@ -526,9 +528,7 @@ try:
         header_banner()
         print(Color.AMARELO +
                 '''    
-
                                         Escolha a Tabela
-
                                  [0] Voltar   
                                  [1] INPUT
                                  [2] FORWARD   
@@ -589,15 +589,17 @@ try:
             os.system("clear")
             print("Ops, Digite apenas os numeros listados!")
             ip_regras()
-    ### fim do menu de escolha 8 ###
+    # fim do menu de escolha 8
 
-    ### escolha 9 ###
+    # escolha 9
 
-    ### fim do menu de escolha 9 ###
+    # fim do menu de escolha 9
 
 
-    ###### MENU INICIAL PRINCIPAL IPV4 ######
+    # MENU INICIAL PRINCIPAL IPV4
     def menu_main_ipv4():
+        '''exibe as opções do menu inicial.'''
+
         header_banner()
         print(Color.AMARELO +
                 '''
@@ -610,7 +612,6 @@ try:
                                 [6] Excluir Regras de Tabelas
                                 [7] Ip (Regras Para IPs Especificos)
                                 [8] Mac (Regras Para Mac Address)
-
                 '''
         + Color.RESET)
 
@@ -647,7 +648,7 @@ try:
             os.system("clear")
             print("Digite Apenas os Números Listados!")
             menu_main_ipv4()
-    #### FIM DO BLOCO DO MENU PRINCIPAL IPV4
+    # FIM DO BLOCO DO MENU PRINCIPAL IPV4
             
 
     if __name__ == "__main__":
@@ -656,3 +657,5 @@ try:
 except KeyboardInterrupt:
     os.system("clear")
     print("Obrigado Por Usar Este Programa!")
+    
+    # Acho que acabou.
