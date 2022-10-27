@@ -657,5 +657,5 @@ try:
 except KeyboardInterrupt:
     os.system("clear")
     print("Obrigado Por Usar Este Programa!")
-    
-    # Acho que acabou.
+
+# Acho que acabou.
