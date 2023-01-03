@@ -1,6 +1,6 @@
 # A interface of the iptables written in Python.
 #
-# Copyright (c) 2022  Juan Carlos Bindez
+# Copyright (c) 2022-2023  Juan Carlos Bindez
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -31,7 +31,7 @@ def header_banner():
 	      ║	  .__/  \_, |  ___|   .__/  \__|  \__,_|  _.__/  _|  \___|  ___/  v1.3.0 ║
 	      ║  _|     ___/         _|                                                  ║
 	      ║                                                                          ║
-	      ║                 Copyright (c) 2022 Juan Carlos Bindez                    ║  
+	      ║                 Copyright (c) 2022-2023 Juan Bindez                      ║  
               ╚══════════════════════════════════════════════════════════════════════════╝                                                                                 
      
                                   *[Ctrl + C] Para Sair do Programa               
